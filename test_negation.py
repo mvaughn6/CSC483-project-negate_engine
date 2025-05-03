@@ -12,6 +12,8 @@ test_data = dataset["test"]
 
 def test_llm(num_tests):
     points = 0
+    
+    llm = NegateModel()
 
     for i in range(num_tests):
         q1 = test_data[i]["q1"] 
@@ -19,7 +21,6 @@ def test_llm(num_tests):
         d1 = test_data[i]["doc1"] 
         d2 = test_data[i]["doc2"]
 
-        llm = NegateModel()
         res1 = llm.run_query(q1, d1, d2)
         res2 = llm.run_query(q2, d1, d2)
         if int(res1) == 1 and int(res2) == 2:

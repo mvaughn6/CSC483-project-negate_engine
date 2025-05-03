@@ -30,7 +30,7 @@ def run_tfidf_tests():
 
 def run_llm_tests():
     print("\n\nLLM Scores:")
-    score = test_llm(10)
+    score = test_llm(50)
     print(f"\tTest 10 queries : {score:.2f}%")
 
 def main():
