@@ -1,6 +1,27 @@
 pluggy==1.5.0
 pytest==8.3.4
+
+# Hugging-Face libraries
 datasets>=2.0.0
 huggingface_hub>=0.8.0
-ollama
+transformers>=4.30.0
+evaluate>=0.4.0
+scikit-learn>=1.0.0
 
+# Model backend
+torch>=1.10.0
+accelerate>=0.20.0
+
+# PEFT & LoRA
+peft>=0.14.0
+
+# Transformer Reinforcement Learning (TRL)
+trl>=0.4.0
+
+# 8‑bit optimizers
+bitsandbytes>=0.39.0
+
+# Other
+ollama
+nltk>=3.5
+numpy>=1.21.0

@@ -34,8 +34,8 @@ def run_llm_tests():
     print(f"\tTest 10 queries : {score:.2f}%")
 
 def main():
-    run_random_tests()
-    run_tfidf_tests()
+    # run_random_tests()
+    # run_tfidf_tests()
     run_llm_tests()
 
 if __name__ == "__main__":

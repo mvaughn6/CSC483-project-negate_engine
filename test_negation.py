@@ -1,5 +1,6 @@
 from datasets import load_dataset
 from tfidf_system import IRSystem
+from negate_model import NegateModel
 import ollama
 
 from negate_engine import *
@@ -11,7 +12,7 @@ test_data = dataset["test"]
 
 def test_llm(num_tests):
     points = 0
-
+    score = 0.0
     for i in range(num_tests):
         q1 = test_data[i]["q1"] 
         q2 = test_data[i]["q2"]  
@@ -21,9 +22,11 @@ def test_llm(num_tests):
         llm = NegateModel()
         res1 = llm.run_query(q1, d1, d2)
         res2 = llm.run_query(q2, d1, d2)
-        if res1 == 1 and res2 == 2:
+        if int(res1) == 1 and (res2) == 2:
             points+=1
-    
+        print("Test: " + str(i+1))
+        print("Q1 Res: " + res1)
+        print("Q2 Res: " + res2 + "\n")
     score = points / num_tests
     percentage = score * 100
     return percentage

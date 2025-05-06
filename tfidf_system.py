@@ -21,10 +21,6 @@ NEG_CUES = {
 NEG_WINDOW = 10
 
 def annotate_negation(tokens):
-    """
-    Prefix up to NEG_WINDOW tokens after any negation cue with 'NOT_'.
-    E.g. ['not','good','at','all'] -> ['not','NOT_good','NOT_at','NOT_all']
-    """
     out = []
     negate = False
     cnt = 0
