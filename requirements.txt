@@ -3,4 +3,24 @@ pytest==8.3.4
 datasets>=2.0.0
 huggingface_hub>=0.8.0
 ollama
-
+accelerate
+bitsandbytes
+xformers==0.0.27
+trl
+peft
+sentencepiece
+protobuf
+hf_transfer
+unsloth @ git+https://github.com/unslothai/unsloth.git@main
+#cut-cross-entropy @ git+https://github.com/unslothai/cut‑cross‑entropy.git@main
+#unsloth-zoo       @ git+https://github.com/unslothai/unsloth‑zoo.git@main
+unsloth>=0.3.0
+torch>=2.0.0
+transformers>=4.36.0
+datasets>=2.14.0
+trl>=0.7.4
+accelerate>=0.24.0
+bitsandbytes>=0.41.0
+scipy>=1.11.0
+click>=8.0.0  # Required by wandb/trl
+wandb>=0.15.0
